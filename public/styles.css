@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+	padding: 0;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+.nav-item {
+    padding-left: 15px;
+}
+
+.nav-potensi {
+    background-color:#67D065;
+    border-radius: 5px;
+}
+
+.nav-layanan {
+    background-color: #65BDD0;
+    border-radius: 5px;
+}
+
+/* *HOMEPAGE */
+.homepage {
+    position: relative;
+}
+.homepage .banner {
+    width: 100%;
+    height: 600px;
+    background-image: url("../photos/homepage/banner.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.homepage > .banner > p {
+    position: absolute;
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    top: 250px;
+    left: 100px;
+}
+
+/* *Homepage Berita */
+.homepage .berita {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px 0 20px 0;
+}
+
+.homepage .berita .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.homepage .berita p.text {
+    font-weight: 700;
+    font-size: 2em;
+    text-align: center;
+}
+
+/* *LUAS */
+.luas {
+    /* min-height: 200px; */
+    background-color: #182227;
+    padding: 20px 0 20px 0;
+    text-align: center;
+    color: white;
+}
+
+.luas p {
+    font-weight: 700;
+    font-size: 2em;
+}
+
+/* *Populasi */
+.homepage .populasi {
+    background-color: #223138;
+    min-height: 200px;
+    padding: 20px 0 20px 0;
+}
+
+.homepage .populasi p.text {
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.homepage .populasi .number {
+    font-weight: 700;
+    font-size: 1.5em;
+    color: white;
+}
+
+/* *Homepage Potensi Desa */
+.homepage .potensi {
+    padding: 80px 0 100px 0;
+}
+
+.homepage .potensi .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    flex: 1;
+}
+
+.homepage .potensi p.text {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.homepage .potensi p.card-text {
+    font-weight: 700;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .homepage > .berita > .collection {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .homepage > .potensi > .collection {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+    }
+  }
