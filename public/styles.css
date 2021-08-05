@@ -98,12 +98,17 @@
 
 /* *Homepage Potensi Desa */
 .homepage .potensi {
-    padding: 80px 0 100px 0;
+    padding: 20px 0 100px 0;
 }
 
 .homepage .potensi .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     flex: 1;
+}
+
+.homepage .potensi .collection {
+    padding: 30px 50px 0 50px;
+    display:flex; gap: 30px
 }
 
 .homepage .potensi p.text {
@@ -116,6 +121,241 @@
     font-weight: 700;
     font-size: 1.2em;
     text-align: center;
+}
+
+/* !PROFIL */
+.profil {
+    position: relative;
+}
+.profil .banner {
+    width: 100%;
+    height: 600px;
+    background-image: url("../photos/profile/agriculture.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profil > .banner > p {
+    position: absolute;
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    top: 20%;
+    left: 40%;
+}
+
+.profil .desa {
+    padding: 20px 0 20px 0;
+}
+
+.profil .desa .box {
+    width: 80%;
+    background-color: #C4C4C4;
+    border-radius: 10px;
+    margin: auto;
+    padding: 20px;
+}
+
+.profil p {
+    text-align: center;
+    font-weight: 700;
+}
+
+.profil .col-md-4{
+    padding: 15px;
+}
+
+.profil .card img{
+    padding: 40px;
+}
+
+.profil img {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+/* !INFOGRAFIS */
+.infografis .jumbotron {
+    width: 100%;
+    min-height: 500px;
+    margin-top: 50px;
+}
+
+.infografis .jumbotron .text {
+    width: 50%;
+}
+
+.infografis .jumbotron .image {
+    float: right;
+    width: 50%;
+}
+
+.infografis p.text {
+    font-weight: 700;
+    font-size: 1.3em;
+}
+
+.infografis .demografi,
+.infografis .pendidikan,
+.infografis .pekerjaan,
+.infografis .kelompok_umur,
+.infografis .agama {
+    margin-top: 20px;
+}
+
+.infografis .card{
+    width: 80%;
+}
+
+/* !Potensi Desa */
+
+.potensi_desa {
+    padding-bottom: 20px;
+}
+
+.potensi_desa p.title{
+    font-weight: 700;
+    text-align: center;
+    font-size: 2em;
+    padding-top: 20px
+}
+
+.potensi_desa .umkm,
+.potensi_desa .guest_house {
+    height: 500px;
+    width: 100%;
+    background-color:#E5E5E5;
+    padding-top: 25px;
+}
+
+.potensi_desa .umkm > p.title {
+    text-align: center;
+}
+
+.potensi_desa .collection {
+    display: flex;
+}
+
+.potensi_desa .content {
+    flex: 1;
+    width: 100%;
+    background-color: white;
+    margin: 10px;
+}
+
+.potensi_desa .content div {
+    padding: 5px 0 0 15px;
+    text-align: center;
+}
+
+.potensi_desa .social1 {
+    width: 100%;
+    background-color: #F6AE99;
+}
+.potensi_desa .social2 {
+    width: 100%;
+    background-color: #39A2DB;
+}
+
+.potensi_desa .content img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.potensi_desa .wisata {
+    height: 500px;
+    width: 100%;
+    padding-top: 25px;
+}
+
+.potensi_desa .wisata .content,
+.potensi_desa .seni_budaya .content {
+    border: 1px solid #E5E5E5;
+}
+
+/* ! Layanan */
+.layanan {
+    min-height: 500px;
+    padding: 20px;
+}
+
+.layanan > p.title {
+    font-weight: 700;
+    font-size: 2em;
+    text-align: center;
+}
+
+.layanan > h4,
+.layanan > h5 {
+    text-align: center;
+}
+
+.layanan .calling {
+    width: 150px;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #29B73F;
+    border-radius: 10px;
+    color: white;
+}
+
+/* ! Berita Desa */
+.berita_desa {
+    padding: 20px;
+}
+
+.berita_desa p.title {
+    font-weight: 700;
+    font-size: 2em;
+    text-align: center;
+    padding: 20px;
+}
+
+.berita_desa .card {
+    margin-bottom: 20px;
+}
+
+/* ! List seni budaya */
+.list_seni_budaya {
+
+}
+
+.list_seni_budaya p.title {
+    font-weight: 700;
+    text-align: center;
+    padding: 20px;
+}
+
+/* *Footer */
+footer {
+    background-color: #223138;
+    padding: 40px;
+    display: flex;
+}
+
+footer .location,
+footer .socials,
+footer .contact {
+    flex: 1;
+    text-align: center;
+}
+
+footer p.title {
+    font-weight: 700;
+    color: white;
+    font-size: 1.3em;
+}
+
+footer p {
+    color: white;
+}
+
+.copyright {
+    background-color: black;
+    color: white;
 }
 
 @media only screen and (max-width: 768px) {
@@ -131,4 +371,18 @@
         flex-direction: column;
         margin: 20px;
     }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .homepage .potensi .card {
+        flex: 1;
+    }
+
+    .homepage .potensi .collection {
+        padding: 0 10px 0 10px;
+        /* flex-direction: row; */
+    }
+
   }

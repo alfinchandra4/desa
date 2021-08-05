@@ -12,7 +12,7 @@
 
     <div class="berita container" style="justify-content: center;">
         <p class="text">Berita Desa</p>
-        <div style="display:flex; gap: 10px" class="collection">
+        <div style="display:flex; gap: 30px" class="collection">
             <div style="flex: 1">
                 <div class="card">
                     <img src="https://www.w3schools.com/html/img_chania.jpg" class="card-img-top">
@@ -82,30 +82,30 @@
     </div>
 
     <div class="potensi container">
-        <p class="text mb-5">Potensi Desa</p>
-        <div style="display:flex; gap: 10px" class="collection">
+        <p class="text mb-2">Potensi Desa</p>
+        <div class="collection">
             <div class="card">
-                <img src="https://www.w3schools.com/html/img_chania.jpg" class="card-img-top">
+                <img src="{{ asset('photos/homepage/seni_budaya.png') }}" class="card-img-top">
                 <div class="card-body bg-light">
                     <p class="card-text">Seni Budaya</p>
                 </div>
             </div>
             <div class="card">
-                <img src="https://www.w3schools.com/html/img_chania.jpg" class="card-img-top">
+                <img src="{{ asset('photos/homepage/wisata.png') }}" class="card-img-top">
                 <div class="card-body bg-light">
-                    <p class="card-text">Seni Budaya</p>
+                    <p class="card-text">Wisata</p>
                 </div>
             </div>
             <div class="card">
-                <img src="https://www.w3schools.com/html/img_chania.jpg" class="card-img-top">
+                <img src="{{ asset('photos/homepage/umkm.png') }}" class="card-img-top">
                 <div class="card-body bg-light">
-                    <p class="card-text">Seni Budaya</p>
+                    <p class="card-text">UMKM</p>
                 </div>
             </div>
             <div class="card">
-                <img src="https://www.w3schools.com/html/img_chania.jpg" class="card-img-top">
+                <img src="{{ asset('photos/homepage/guest_house.png') }}" class="card-img-top">
                 <div class="card-body bg-light">
-                    <p class="card-text">Seni Budaya</p>
+                    <p class="card-text">Guest House</p>
                 </div>
             </div>
         </div>

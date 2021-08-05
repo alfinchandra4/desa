@@ -13,4 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'public.index');
+Route::view('/', 'public.index')->name('homepage');
+Route::view('/profile', 'public.profile')->name('profile');
+Route::view('/infografis', 'public.infografis')->name('infografis');
+Route::view('/berita', 'public.berita')->name('berita');
+Route::view('/layanan', 'public.layanan')->name('layanan');
+
+Route::prefix('potensi_desa')->group(function() {
+    Route::view('/', 'public.potensi')->name('potensi_desa');
+    Route::get('/umkm');
+    Route::get('/seni_budaya');
+    Route::get('/wisata');
+    Route::get('/guest_house');
+});
