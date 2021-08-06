@@ -18,8 +18,9 @@ class KategoriPotensidesaSeeder extends Seeder
         $data = [
             ['name' => 'UMKM'],
             ['name' => 'Wisata'],
-            ['name' => 'Seni Budaya'],
-            ['name' => 'Guest House']
+            ['name' => 'Guest House'],
+            ['name' => 'Seni Budaya']
+
         ];
 
         DB::table('kategori_potensi_desa')->insert($data);

@@ -11,7 +11,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('admin.berita') }}" class="nav-link">
                     <i class="fas fa-user nav-icon"></i>
                     <p>Berita Desa</p>
                 </a>

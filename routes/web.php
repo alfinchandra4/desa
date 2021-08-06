@@ -44,6 +44,7 @@ Route::prefix('admin')->group(function() {
 
     Route::prefix('berita')->group(function() {
         Route::get('/', [BeritaController::class, 'index'])->name('admin.berita');
+        Route::get('/create', [BeritaController::class, 'create'])->name('admin.berita.create');
         Route::post('/', [BeritaController::class, 'store'])->name('admin.berita.store');
         Route::get('/edit/{berita_id}', [BeritaController::class, 'edit'])->name('admin.berita.edit');
         Route::get('/update/{berita_id}', [BeritaController::class, 'update'])->name('admin.berita.update');

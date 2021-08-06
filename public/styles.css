@@ -211,14 +211,14 @@
 }
 
 .infografis .card{
-    width: 80%;
+    width: 60%;
 }
 
 /* !Potensi Desa */
 
 .potensi_desa {
     /* padding-bottom: 20px; */
-    min-height: 2000px;
+    /* min-height: 2000px; */
 }
 
 .potensi_desa p.title{

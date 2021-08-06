@@ -8,7 +8,7 @@ use App\Models\Umkm;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class PotensiDesaController extends Controller
+class   PotensiDesaController extends Controller
 {
 
     public function create()
@@ -75,6 +75,19 @@ class PotensiDesaController extends Controller
     public function umkm()
     {
         return view('public.list_umkm');
+    }
+
+    public function wisata () {
+        return view('public.list_wisata');
+
+    }
+
+    public function seni_budaya () {
+        return view('public.list_senibudaya');
+    }
+
+    public function guest_house ( ) {
+        return view('public.list_guesthouse');
     }
 
     public function umkm_admin()

@@ -9,33 +9,29 @@
         <p class="title">UMKM</p>
         <div class="container">
             <div class="row">
+                {{--
+                    $data = [
+                            ['name' => 'UMKM'],
+                            ['name' => 'Wisata'],
+                            ['name' => 'Seni Budaya'],
+                            ['name' => 'Guest House']
+                        ];
+                --}}
+                @php
+                $datas = App\Models\Potensidesa::where('kategori_potensi_desa_id',
+                1)->orderByDesc('created_at')->take(3)->get();
+                @endphp
+                @foreach ($datas as $data)
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="https://www.w3schools.com/html/pic_trulli.jpg" class="card-img-top">
-                        <div class="name">Keripik Pisang</div>
-                        <div class="phone">08128918030</div>
-                        <div class="social1">IG: @ulfafadianadsdasd</div>
-                        <div class="social2">FB: Diana</div>
+                        <img src="{{ asset('storage/potensi/'.$data->photo_path) }}" class="card-img-top">
+                        <div class="name">{{ $data->name }}</div>
+                        <div class="phone">{{ $data->phone }}</div>
+                        <div class="social1">{{ $data->social }}</div>
+                        <div class="social2">{{ $data->social1 }}</div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://www.w3schools.com/html/pic_trulli.jpg" class="card-img-top">
-                        <div class="name">Keripik Pisang</div>
-                        <div class="phone">08128918030</div>
-                        <div class="social1">IG: @ulfafadianadsdasd</div>
-                        <div class="social2">FB: Diana</div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://www.w3schools.com/html/pic_trulli.jpg" class="card-img-top">
-                        <div class="name">Keripik Pisang</div>
-                        <div class="phone">08128918030</div>
-                        <div class="social1">IG: @ulfafadianadsdasd</div>
-                        <div class="social2">FB: Diana</div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
         <div class="mt-3" style="display:block;text-align:center">
@@ -47,33 +43,21 @@
         <div class="collection container">
             <div class="container">
                 <div class="row">
+                    @php
+                    $datas = App\Models\Potensidesa::where('kategori_potensi_desa_id',
+                    2)->orderByDesc('created_at')->take(3)->get();
+                    @endphp
+                    @foreach ($datas as $data)
                     <div class="col-md-4">
                         <div class="card">
-                            <img src="https://www.w3schools.com/html/pic_trulli.jpg" class="card-img-top">
-                            <div class="name">Keripik Pisang</div>
-                            <div class="phone">08128918030</div>
-                            <div class="social1">IG: @ulfafadianadsdasd</div>
-                            <div class="social2">FB: Diana</div>
+                            <img src="{{ asset('storage/potensi/'.$data->photo_path) }}" class="card-img-top">
+                            <div class="name">{{ $data->name }}</div>
+                            <div class="phone">{{ $data->phone }}</div>
+                            <div class="social1">{{ $data->social }}</div>
+                            <div class="social2">{{ $data->social1 }}</div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="https://www.w3schools.com/html/pic_trulli.jpg" class="card-img-top">
-                            <div class="name">Keripik Pisang</div>
-                            <div class="phone">08128918030</div>
-                            <div class="social1">IG: @ulfafadianadsdasd</div>
-                            <div class="social2">FB: Diana</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="https://www.w3schools.com/html/pic_trulli.jpg" class="card-img-top">
-                            <div class="name">Keripik Pisang</div>
-                            <div class="phone">08128918030</div>
-                            <div class="social1">IG: @ulfafadianadsdasd</div>
-                            <div class="social2">FB: Diana</div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -85,33 +69,21 @@
         <p class="title">Guest House</p>
         <div class="container">
             <div class="row">
+                @php
+                $datas = App\Models\Potensidesa::where('kategori_potensi_desa_id',
+                3)->orderByDesc('created_at')->take(3)->get();
+                @endphp
+                @foreach ($datas as $data)
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="https://www.w3schools.com/html/pic_trulli.jpg" class="card-img-top">
-                        <div class="name">Keripik Pisang</div>
-                        <div class="phone">08128918030</div>
-                        <div class="social1">IG: @ulfafadianadsdasd</div>
-                        <div class="social2">FB: Diana</div>
+                        <img src="{{ asset('storage/potensi/'.$data->photo_path) }}" class="card-img-top">
+                        <div class="name">{{ $data->name }}</div>
+                        <div class="phone">{{ $data->phone }}</div>
+                        <div class="social1">{{ $data->social }}</div>
+                        <div class="social2">{{ $data->social1 }}</div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://www.w3schools.com/html/pic_trulli.jpg" class="card-img-top">
-                        <div class="name">Keripik Pisang</div>
-                        <div class="phone">08128918030</div>
-                        <div class="social1">IG: @ulfafadianadsdasd</div>
-                        <div class="social2">FB: Diana</div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://www.w3schools.com/html/pic_trulli.jpg" class="card-img-top">
-                        <div class="name">Keripik Pisang</div>
-                        <div class="phone">08128918030</div>
-                        <div class="social1">IG: @ulfafadianadsdasd</div>
-                        <div class="social2">FB: Diana</div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
         <div class="mt-3" style="display:block;text-align:center">
@@ -122,33 +94,21 @@
         <p class="title">Seni Budaya</p>
         <div class="container">
             <div class="row">
+                @php
+                $datas = App\Models\Potensidesa::where('kategori_potensi_desa_id',
+                4)->orderByDesc('created_at')->take(3)->get();
+                @endphp
+                @foreach ($datas as $data)
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="https://www.w3schools.com/html/pic_trulli.jpg" class="card-img-top">
-                        <div class="name">Keripik Pisang</div>
-                        <div class="phone">08128918030</div>
-                        <div class="social1">IG: @ulfafadianadsdasd</div>
-                        <div class="social2">FB: Diana</div>
+                        <img src="{{ asset('storage/potensi/'.$data->photo_path) }}" class="card-img-top">
+                        <div class="name">{{ $data->name }}</div>
+                        <div class="phone">{{ $data->phone }}</div>
+                        <div class="social1">{{ $data->social }}</div>
+                        <div class="social2">{{ $data->social1 }}</div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://www.w3schools.com/html/pic_trulli.jpg" class="card-img-top">
-                        <div class="name">Keripik Pisang</div>
-                        <div class="phone">08128918030</div>
-                        <div class="social1">IG: @ulfafadianadsdasd</div>
-                        <div class="social2">FB: Diana</div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://www.w3schools.com/html/pic_trulli.jpg" class="card-img-top">
-                        <div class="name">Keripik Pisang</div>
-                        <div class="phone">08128918030</div>
-                        <div class="social1">IG: @ulfafadianadsdasd</div>
-                        <div class="social2">FB: Diana</div>
-                    </div>
-                </div>
+                @endforeach
             </div>
             <div class="mt-3" style="display:block;text-align:center">
                 <a href="{{ route('potensi_seni_budaya') }}" class="btn btn-primary">Semua Seni Budaya</a>
