@@ -14,100 +14,92 @@
             <img src="{{ asset('photos/infografis/infografis.png') }}" width="300px" height="300px" />
         </div>
     </div>
-    {{-- <div class="row container">
-        <div class="col-md-5">
-            <p>INFOGRAFIS</p>
+    <div class="demografi">
+        <p class="text">Demografi Penduduk</p>
+        <div class="card">
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Jenis Kelamin</th>
+                            <th>Jumlah</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Laki-laki</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Perempuan</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <div class="col-md-7">
-            <img src="{{ asset('photos/infografis/infografis.png') }}" class="img-fluid"/>
-</div>
-</div> --}}
-<div class="demografi">
-    <p class="text">Demografi Penduduk</p>
-    <div class="card">
-        <div class="card-body">
-            <table class="table">
-                <thead>
+    </div>
+    <div class="pendidikan">
+        <p class="text">Pendidikan</p>
+        <div class="card">
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Jenis Pendidikan</th>
+                            <th>Jumlah</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="pekerjaan">
+        <p class="text">Pekerjaan</p>
+        <div class="card">
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Jenis Pekerjaan</th>
+                            <th>Jumlah</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="kelompok_umur">
+        <p class="text">Kelompok Umur</p>
+        <div class="card">
+            <div class="card-body">
+                <table class="table">
                     <tr>
-                        <th>Jenis Kelamin</th>
+                        <th>Kelompok Umur</th>
                         <th>Jumlah</th>
                     </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Laki-laki</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>Perempuan</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>Total</td>
-                        <td>0</td>
-                    </tr>
-                </tbody>
-            </table>
+                </table>
+            </div>
         </div>
     </div>
-</div>
-<div class="pendidikan">
-    <p class="text">Pendidikan</p>
-    <div class="card">
-        <div class="card-body">
-            <table class="table">
-                <thead>
+    <div class="agama mb-2">
+        <p class="text">Agama</p>
+        <div class="card">
+            <div class="card-body">
+                <table class="table">
                     <tr>
-                        <th>Jenis Pendidikan</th>
+                        <th>Agama</th>
                         <th>Jumlah</th>
                     </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
+                </table>
+            </div>
         </div>
     </div>
-</div>
-<div class="pekerjaan">
-    <p class="text">Pekerjaan</p>
-    <div class="card">
-        <div class="card-body">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Jenis Pekerjaan</th>
-                        <th>Jumlah</th>
-                    </tr>
-                </thead>
-            </table>
-        </div>
-    </div>
-</div>
-<div class="kelompok_umur">
-    <p class="text">Kelompok Umur</p>
-    <div class="card">
-        <div class="card-body">
-            <table class="table">
-                <tr>
-                    <th>Kelompok Umur</th>
-                    <th>Jumlah</th>
-                </tr>
-            </table>
-        </div>
-    </div>
-</div>
-<div class="agama">
-    <p class="text">Agama</p>
-    <div class="card">
-        <div class="card-body">
-            <table class="table">
-                <tr>
-                    <th>Agama</th>
-                    <th>Jumlah</th>
-                </tr>
-            </table>
-        </div>
-    </div>
-</div>
 </div>
 @endsection

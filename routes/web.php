@@ -1,6 +1,12 @@
 <?php
 
+use App\Http\Controllers\AdminAuthController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\InfografisController;
+use App\Http\Controllers\PotensiDesaController;
 use Illuminate\Support\Facades\Route;
+use Symfony\Polyfill\Intl\Idn\Info;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,8 +27,67 @@ Route::view('/layanan', 'public.layanan')->name('layanan');
 
 Route::prefix('potensi_desa')->group(function() {
     Route::view('/', 'public.potensi')->name('potensi_desa');
-    Route::get('/umkm');
-    Route::get('/seni_budaya');
-    Route::get('/wisata');
-    Route::get('/guest_house');
+    Route::get('/umkm', [PotensiDesaController::class, 'umkm'])->name('potensi_umkm');
+    Route::get('/seni_budaya', [PotensiDesaController::class, 'seni_budaya'])->name('potensi_seni_budaya');
+    Route::get('/wisata', [PotensiDesaController::class, 'wisata'])->name('potensi_wisata');
+    Route::get('/guest_house', [PotensiDesaController::class, 'guest_house'])->name('potensi_guest_house');
+});
+
+// Login Area
+Route::get('/login',  [AdminAuthController::class, 'login'])->middleware('guest');
+Route::post('/login', [AdminAuthController::class, 'attempting']);
+Route::get('/logout', [AdminAuthController::class, 'logout']);
+
+// Admin Area
+Route::prefix('admin')->group(function() {
+    Route::get('/', [AdminController::class, 'index'])->name('admin.index');
+
+    Route::prefix('berita')->group(function() {
+        Route::get('/', [BeritaController::class, 'index'])->name('admin.berita');
+        Route::post('/', [BeritaController::class, 'store'])->name('admin.berita.store');
+        Route::get('/edit/{berita_id}', [BeritaController::class, 'edit'])->name('admin.berita.edit');
+        Route::get('/update/{berita_id}', [BeritaController::class, 'update'])->name('admin.berita.update');
+        Route::get('/delete/{berita_id}', [BeritaController::class, 'destroy'])->name('admin.berita.delete');
+    });
+
+    Route::prefix('infografis')->group(function () {
+        Route::get('agama', [InfografisController::class, 'agama'])->name('admin.infografis.agama');
+        Route::post('agama', [InfografisController::class, 'agama_store'])->name('admin.infografis.agama.store');
+        Route::get('agama/{agama_id}', [InfografisController::class, 'agama_delete'])->name('admin.infografis.agama.delete');
+
+        Route::get('demografi', [InfografisController::class, 'demografi'])->name('admin.infografis.demografi');
+        Route::post('demografi', [InfografisController::class, 'demografi_update'])->name('admin.infografis.demografi.update');
+
+        Route::get('pekerjaan', [InfografisController::class, 'pekerjaan'])->name('admin.infografis.pekerjaan');
+        Route::post('pekerjaan', [InfografisController::class, 'pekerjaan_store'])->name('admin.infografis.pekerjaan.store');
+        Route::get('pekerjaan/{pekerjaan_id}', [InfografisController::class, 'pekerjaan_delete'])->name('admin.infografis.pekerjaan.delete');
+
+        Route::get('pendidikan', [InfografisController::class, 'pendidikan'])->name('admin.infografis.pendidikan');
+        Route::post('pendidikan', [InfografisController::class, 'pendidikan_store'])->name('admin.infografis.pendidikan.store');
+        Route::get('pendidikan/{poendidikan_id}', [InfografisController::class, 'pendidikan_delete'])->name('admin.infografis.pendidikan.delete');
+
+        Route::get('umur', [InfografisController::class, 'umur'])->name('admin.infografis.umur');
+        Route::post('umur', [InfografisController::class, 'umur_store'])->name('admin.infografis.umur.store');
+        Route::get('umur/{umur_id}', [InfografisController::class, 'umur_delete'])->name('admin.infografis.umur.delete');
+
+    });
+
+    Route::prefix('potensi')->group(function() {
+        Route::get('budaya', [PotensiController::class, 'budaya'])->name('admin.infografis.budaya');
+        Route::post('budaya', [PotensiController::class, 'budaya_store'])->name('admin.infografis.budaya.store');
+        Route::get('budaya/{budaya_id}', [PotensiController::class, 'budaya_delete'])->name('admin.infografis.budaya.delete');
+
+        Route::get('guest_house', [PotensiController::class, 'guest_house'])->name('admin.infografis.guest_house');
+        Route::post('guest_house', [PotensiController::class, 'guest_house_store'])->name('admin.infografis.guest_house.store');
+        Route::get('guest_house/{guest_house_id}', [PotensiController::class, 'guest_house_delete'])->name('admin.infografis.guest_house.delete');
+
+        Route::get('umkm', [PotensiController::class, 'umkm'])->name('admin.infografis.umkm');
+        Route::post('umkm', [PotensiController::class, 'umkm_store'])->name('admin.infografis.umkm.store');
+        Route::get('umkm/{umkm_id}', [PotensiController::class, 'umkm_delete'])->name('admin.infografis.umkm.delete');
+
+        Route::get('wisata', [PotensiController::class, 'wisata'])->name('admin.infografis.wisata');
+        Route::post('wisata', [PotensiController::class, 'wisata_store'])->name('admin.infografis.wisata.store');
+        Route::get('wisata/{wisata_id}', [PotensiController::class, 'wisata_delete'])->name('admin.infografis.wisata.delete');
+    });
+
 });

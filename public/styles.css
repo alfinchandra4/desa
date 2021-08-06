@@ -48,18 +48,22 @@
 .homepage .berita {
     width: 100%;
     margin-bottom: 20px;
-    padding: 20px 0 20px 0;
+    padding: 20px;
 }
 
 .homepage .berita .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
 
 .homepage .berita p.text {
     font-weight: 700;
     font-size: 2em;
     text-align: center;
+}
+
+.homepage .berita img {
+    height: 200px;
+    object-fit: cover;
 }
 
 /* *LUAS */
@@ -98,17 +102,13 @@
 
 /* *Homepage Potensi Desa */
 .homepage .potensi {
-    padding: 20px 0 100px 0;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px;
 }
 
 .homepage .potensi .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    flex: 1;
-}
-
-.homepage .potensi .collection {
-    padding: 30px 50px 0 50px;
-    display:flex; gap: 30px
 }
 
 .homepage .potensi p.text {
@@ -121,6 +121,11 @@
     font-weight: 700;
     font-size: 1.2em;
     text-align: center;
+}
+
+.homepage .potensi img {
+    height: 200px;
+    object-fit: cover;
 }
 
 /* !PROFIL */
@@ -212,7 +217,8 @@
 /* !Potensi Desa */
 
 .potensi_desa {
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
+    min-height: 2000px;
 }
 
 .potensi_desa p.title{
@@ -222,11 +228,8 @@
     padding-top: 20px
 }
 
-.potensi_desa .umkm,
 .potensi_desa .guest_house {
-    height: 500px;
     width: 100%;
-    background-color:#E5E5E5;
     padding-top: 25px;
 }
 
@@ -234,45 +237,35 @@
     text-align: center;
 }
 
-.potensi_desa .collection {
-    display: flex;
-}
-
-.potensi_desa .content {
-    flex: 1;
-    width: 100%;
-    background-color: white;
-    margin: 10px;
-}
-
 .potensi_desa .content div {
     padding: 5px 0 0 15px;
     text-align: center;
 }
 
-.potensi_desa .social1 {
+.potensi_desa .name,
+.potensi_desa .phone,
+.potensi_desa .social1,
+.potensi_desa .social2 {
+    padding: 5px 0 5px 20px;
+}
+
+.potensi_desa .social1,
+.potensi_desa .social2 {
     width: 100%;
     background-color: #F6AE99;
 }
-.potensi_desa .social2 {
-    width: 100%;
-    background-color: #39A2DB;
-}
 
-.potensi_desa .content img {
+.potensi_desa img {
     height: 200px;
     object-fit: cover;
 }
 
-.potensi_desa .wisata {
-    height: 500px;
+.potensi_desa .wisata,
+.potensi_desa .seni_budaya {
     width: 100%;
-    padding-top: 25px;
-}
-
-.potensi_desa .wisata .content,
-.potensi_desa .seni_budaya .content {
-    border: 1px solid #E5E5E5;
+    padding: 20px;
+    background-color: #E5E5E5;
+    margin-top: 20px;
 }
 
 /* ! Layanan */
@@ -305,6 +298,7 @@
 /* ! Berita Desa */
 .berita_desa {
     padding: 20px;
+    background-color: #e5e5e5;
 }
 
 .berita_desa p.title {
@@ -318,6 +312,11 @@
     margin-bottom: 20px;
 }
 
+.berita_desa img {
+    height: 200px;
+    object-fit: cover;
+}
+
 /* ! List seni budaya */
 .list_seni_budaya {
 
@@ -328,6 +327,114 @@
     text-align: center;
     padding: 20px;
 }
+
+/* ------------------------------------------- List UMKM */
+.daftar_umkm p.title {
+    font-weight: 700;
+    font-size: 2em;
+    text-align: center;
+    padding: 20px;
+}
+
+.daftar_umkm .name,
+.daftar_umkm .phone,
+.daftar_umkm .social1,
+.daftar_umkm .social2 {
+    padding: 5px 0 5px 20px;
+}
+
+.daftar_umkm .social1,
+.daftar_umkm .social2 {
+    width: 100%;
+    background-color: #F6AE99;
+}
+
+.daftar_umkm .card img {
+    height: 200px;
+    object-fit: cover;
+}
+/* ----------------------------------------------------- */
+
+/* ------------------------------------------- List Wisata */
+.daftar_wisata p.title {
+    font-weight: 700;
+    font-size: 2em;
+    text-align: center;
+    padding: 20px;
+}
+
+.daftar_wisata .name,
+.daftar_wisata .phone,
+.daftar_wisata .social1,
+.daftar_wisata .social2 {
+    padding: 5px 0 5px 20px;
+}
+
+.daftar_wisata .social1,
+.daftar_wisata .social2 {
+    width: 100%;
+    background-color: #F6AE99;
+}
+
+.daftar_wisata .card img {
+    height: 200px;
+    object-fit: cover;
+}
+/* ----------------------------------------------------- */
+
+/* ------------------------------------------- List Seni Budaya */
+.daftar_senibudaya p.title {
+    font-weight: 700;
+    font-size: 2em;
+    text-align: center;
+    padding: 20px;
+}
+
+.daftar_senibudaya .name,
+.daftar_senibudaya .phone,
+.daftar_senibudaya .social1,
+.daftar_senibudaya .social2 {
+    padding: 5px 0 5px 20px;
+}
+
+.daftar_senibudaya .social1,
+.daftar_senibudaya .social2 {
+    width: 100%;
+    background-color: #F6AE99;
+}
+
+.daftar_senibudaya .card img {
+    height: 200px;
+    object-fit: cover;
+}
+/* ----------------------------------------------------- */
+
+/* ------------------------------------------- List guest house */
+.daftar_guesthouse p.title {
+    font-weight: 700;
+    font-size: 2em;
+    text-align: center;
+    padding: 20px;
+}
+
+.daftar_guesthouse .name,
+.daftar_guesthouse .phone,
+.daftar_guesthouse .social1,
+.daftar_guesthouse .social2 {
+    padding: 5px 0 5px 20px;
+}
+
+.daftar_guesthouse .social1,
+.daftar_guesthouse .social2 {
+    width: 100%;
+    background-color: #F6AE99;
+}
+
+.daftar_guesthouse .card img {
+    height: 200px;
+    object-fit: cover;
+}
+/* ----------------------------------------------------- */
 
 /* *Footer */
 footer {
@@ -372,17 +479,24 @@ footer p {
         margin: 20px;
     }
 
+    .homepage .berita .card {
+        margin-bottom: 20px;
+    }
+
     footer {
         flex-direction: column;
     }
 
     .homepage .potensi .card {
-        flex: 1;
+        margin-bottom: 20px;
     }
 
-    .homepage .potensi .collection {
-        padding: 0 10px 0 10px;
-        /* flex-direction: row; */
+    .potensi_desa .card {
+        margin-bottom: 20px;
+    }
+
+    .infografis .card{
+        width: 100%;
     }
 
   }

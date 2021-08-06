@@ -12,8 +12,20 @@
 
     <div class="berita container" style="justify-content: center;">
         <p class="text">Berita Desa</p>
-        <div style="display:flex; gap: 30px" class="collection">
-            <div style="flex: 1">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.w3schools.com/html/img_girl.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <div class="card-date-created">20 July 2021</div>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn" style="float: right;">Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
                 <div class="card">
                     <img src="https://www.w3schools.com/html/img_chania.jpg" class="card-img-top">
                     <div class="card-body">
@@ -25,19 +37,7 @@
                     </div>
                 </div>
             </div>
-            <div style="flex: 1">
-                <div class="card">
-                    <img src="https://www.w3schools.com/html/img_chania.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <div class="card-date-created">20 July 2021</div>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn" style="float: right;">Selengkapnya</a>
-                    </div>
-                </div>
-            </div>
-            <div style="flex: 1">
+            <div class="col-md-4">
                 <div class="card">
                     <img src="https://www.w3schools.com/html/img_chania.jpg" class="card-img-top">
                     <div class="card-body">
@@ -83,29 +83,37 @@
 
     <div class="potensi container">
         <p class="text mb-2">Potensi Desa</p>
-        <div class="collection">
-            <div class="card">
-                <img src="{{ asset('photos/homepage/seni_budaya.png') }}" class="card-img-top">
-                <div class="card-body bg-light">
-                    <p class="card-text">Seni Budaya</p>
+        <div class="row">
+            <div class="col-6 col-sm-3">
+                <div class="card">
+                    <img src="{{ asset('photos/homepage/seni_budaya.png') }}" class="card-img-top">
+                    <div class="card-body bg-light">
+                        <p class="card-text">Seni Budaya</p>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="{{ asset('photos/homepage/wisata.png') }}" class="card-img-top">
-                <div class="card-body bg-light">
-                    <p class="card-text">Wisata</p>
+            <div class="col-6 col-sm-3">
+                <div class="card">
+                    <img src="{{ asset('photos/homepage/wisata.png') }}" class="card-img-top">
+                    <div class="card-body bg-light">
+                        <p class="card-text">Wisata</p>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="{{ asset('photos/homepage/umkm.png') }}" class="card-img-top">
-                <div class="card-body bg-light">
-                    <p class="card-text">UMKM</p>
+            <div class="col-6 col-sm-3">
+                <div class="card">
+                    <img src="{{ asset('photos/homepage/umkm.png') }}" class="card-img-top">
+                    <div class="card-body bg-light">
+                        <p class="card-text">UMKM</p>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="{{ asset('photos/homepage/guest_house.png') }}" class="card-img-top">
-                <div class="card-body bg-light">
-                    <p class="card-text">Guest House</p>
+            <div class="col-6 col-sm-3">
+                <div class="card">
+                    <img src="{{ asset('photos/homepage/guest_house.png') }}" class="card-img-top">
+                    <div class="card-body bg-light">
+                        <p class="card-text">Guest House</p>
+                    </div>
                 </div>
             </div>
         </div>
