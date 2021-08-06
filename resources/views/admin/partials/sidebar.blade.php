@@ -26,25 +26,31 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="./index.html" class="nav-link">
+                        <a href="{{ route('admin.potensi.create') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
-                            <p>UKM</p>
+                            <p>Tambah Potensi Desa</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="./index3.html" class="nav-link">
+                        <a href="{{ route('admin.infografis.umkm') }}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>UMKM</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('admin.infografis.wisata') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Wisata</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="./index3.html" class="nav-link">
+                        <a href="{{ route('admin.infografis.budaya') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Seni Budaya</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="./index3.html" class="nav-link">
+                        <a href="{{ route('admin.infografis.guest_house') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Guest House</p>
                         </a>

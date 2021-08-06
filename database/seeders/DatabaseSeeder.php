@@ -15,9 +15,10 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         Admin::factory()->create();
-        
+
         $this->call([
             DemografiSeeder::class,
+            KategoriPotensidesaSeeder::class,
         ]);
     }
 }

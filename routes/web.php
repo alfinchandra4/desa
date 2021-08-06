@@ -73,21 +73,14 @@ Route::prefix('admin')->group(function() {
     });
 
     Route::prefix('potensi')->group(function() {
-        Route::get('budaya', [PotensiController::class, 'budaya'])->name('admin.infografis.budaya');
-        Route::post('budaya', [PotensiController::class, 'budaya_store'])->name('admin.infografis.budaya.store');
-        Route::get('budaya/{budaya_id}', [PotensiController::class, 'budaya_delete'])->name('admin.infografis.budaya.delete');
+        Route::get('budaya', [PotensiDesaController::class, 'budaya_admin'])->name('admin.infografis.budaya');
+        Route::get('guest_house', [PotensiDesaController::class, 'guest_house_admin'])->name('admin.infografis.guest_house');
+        Route::get('umkm', [PotensiDesaController::class, 'umkm_admin'])->name('admin.infografis.umkm');
+        Route::get('wisata', [PotensiDesaController::class, 'wisata_admin'])->name('admin.infografis.wisata');
 
-        Route::get('guest_house', [PotensiController::class, 'guest_house'])->name('admin.infografis.guest_house');
-        Route::post('guest_house', [PotensiController::class, 'guest_house_store'])->name('admin.infografis.guest_house.store');
-        Route::get('guest_house/{guest_house_id}', [PotensiController::class, 'guest_house_delete'])->name('admin.infografis.guest_house.delete');
-
-        Route::get('umkm', [PotensiController::class, 'umkm'])->name('admin.infografis.umkm');
-        Route::post('umkm', [PotensiController::class, 'umkm_store'])->name('admin.infografis.umkm.store');
-        Route::get('umkm/{umkm_id}', [PotensiController::class, 'umkm_delete'])->name('admin.infografis.umkm.delete');
-
-        Route::get('wisata', [PotensiController::class, 'wisata'])->name('admin.infografis.wisata');
-        Route::post('wisata', [PotensiController::class, 'wisata_store'])->name('admin.infografis.wisata.store');
-        Route::get('wisata/{wisata_id}', [PotensiController::class, 'wisata_delete'])->name('admin.infografis.wisata.delete');
+        Route::get('create', [PotensiDesaController::class, 'create'])->name('admin.potensi.create');
+        Route::post('store', [PotensiDesaController::class, 'store'])->name('admin.potensi.store');
+        Route::get('delete/{potensi_desa_id}', [PotensiDesaController::class, 'delete'])->name('admin.potensi.delete');
     });
 
 });
