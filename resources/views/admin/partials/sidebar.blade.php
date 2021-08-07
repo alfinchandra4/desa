@@ -5,7 +5,7 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <li class="nav-header">Sistem Informasi Desa</li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('admin.index') }}" class="nav-link">
                     <i class="fas fa-user nav-icon"></i>
                     <p>Dasbor</p>
                 </a>

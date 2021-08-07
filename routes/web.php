@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\InfografisController;
 use App\Http\Controllers\PotensiDesaController;
+use App\Models\Berita;
 use Illuminate\Support\Facades\Route;
 use Symfony\Polyfill\Intl\Idn\Info;
 
@@ -34,12 +35,12 @@ Route::prefix('potensi_desa')->group(function() {
 });
 
 // Login Area
-Route::get('/login',  [AdminAuthController::class, 'login'])->middleware('guest');
+Route::get('/login',  [AdminAuthController::class, 'login'])->middleware('guest')->name('login');
 Route::post('/login', [AdminAuthController::class, 'attempting']);
 Route::get('/logout', [AdminAuthController::class, 'logout']);
 
 // Admin Area
-Route::prefix('admin')->group(function() {
+Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function() {
     Route::get('/', [AdminController::class, 'index'])->name('admin.index');
 
     Route::prefix('berita')->group(function() {
@@ -47,8 +48,9 @@ Route::prefix('admin')->group(function() {
         Route::get('/create', [BeritaController::class, 'create'])->name('admin.berita.create');
         Route::post('/', [BeritaController::class, 'store'])->name('admin.berita.store');
         Route::get('/edit/{berita_id}', [BeritaController::class, 'edit'])->name('admin.berita.edit');
-        Route::get('/update/{berita_id}', [BeritaController::class, 'update'])->name('admin.berita.update');
+        Route::post('/update/{berita_id}', [BeritaController::class, 'update'])->name('admin.berita.update');
         Route::get('/delete/{berita_id}', [BeritaController::class, 'destroy'])->name('admin.berita.delete');
+        Route::get('/detail/{berita_id}', [BeritaController::class, 'detail'])->name('admin.berita.detail');
     });
 
     Route::prefix('infografis')->group(function () {
@@ -84,4 +86,9 @@ Route::prefix('admin')->group(function() {
         Route::get('delete/{potensi_desa_id}', [PotensiDesaController::class, 'delete'])->name('admin.potensi.delete');
     });
 
+});
+
+// File manager
+Route::group(['prefix' => 'laravel-filemanager'], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
 });

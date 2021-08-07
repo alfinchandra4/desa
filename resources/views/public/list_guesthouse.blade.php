@@ -7,17 +7,20 @@
     <p class="title">Daftar Guest House</p>
     <div class="container">
         <div class="row">
-            @for ($i = 0; $i < 7; $i++)
-            <div class="col-md-3">
-                <div class="card mb-3">
-                    <img src="https://www.w3schools.com/html/img_girl.jpg" class="card-img-top">
-                    <div class="name">Keripik Pisang</div>
-                    <div class="phone">08128918030</div>
-                    <div class="social1">IG: @ulfafadianadsdasd</div>
-                    <div class="social2">FB: Diana</div>
-                </div>
+            @php
+            $datas = App\Models\Potensidesa::where('kategori_potensi_desa_id', 3)->orderByDesc('created_at')->get();
+        @endphp
+        @foreach ($datas as $data)
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <img src="{{ asset('storage/potensi/'.$data->photo_path) }}" class="card-img-top">
+                <div class="name">{{ $data->name }}</div>
+                <div class="phone">{{ $data->phone }}</div>
+                <div class="social1">{{ $data->social }}</div>
+                <div class="social2">{{ $data->social1 }}</div>
             </div>
-            @endfor
+        </div>
+        @endforeach
         </div>
     </div>
 </div>

@@ -186,15 +186,22 @@
     width: 100%;
     min-height: 500px;
     margin-top: 50px;
+    position: relative;
 }
 
 .infografis .jumbotron .text {
     width: 50%;
+    position: absolute;
+    bottom: 300px;
+    left: 100px;
 }
 
 .infografis .jumbotron .image {
     float: right;
-    width: 50%;
+    top: 20px;
+    left: 700px;
+    position: absolute;
+    width: 30%;
 }
 
 .infografis p.text {
@@ -315,6 +322,35 @@
 .berita_desa img {
     height: 200px;
     object-fit: cover;
+}
+
+/* ! Detail Berita */
+.detail_berita {
+
+}
+
+.detail_berita .title {
+
+}
+
+.detail_berita img.thumbnail {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.detail_berita .author {
+    width: 100%;
+    padding: 10px;
+    background-color: #E5E5E5;
+}
+
+.detail_berita .description {
+    text-align: justify;
+}
+
+.detail_berita .properties {
+    padding: 10px;
 }
 
 /* ! List seni budaya */

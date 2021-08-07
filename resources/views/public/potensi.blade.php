@@ -9,17 +9,8 @@
         <p class="title">UMKM</p>
         <div class="container">
             <div class="row">
-                {{--
-                    $data = [
-                            ['name' => 'UMKM'],
-                            ['name' => 'Wisata'],
-                            ['name' => 'Seni Budaya'],
-                            ['name' => 'Guest House']
-                        ];
-                --}}
                 @php
-                $datas = App\Models\Potensidesa::where('kategori_potensi_desa_id',
-                1)->orderByDesc('created_at')->take(3)->get();
+                $datas = App\Models\Potensidesa::where('kategori_potensi_desa_id',1)->orderByDesc('created_at')->take(3)->get();
                 @endphp
                 @foreach ($datas as $data)
                 <div class="col-md-4">

@@ -10,8 +10,7 @@
     <ul class="navbar-nav ml-auto">
         <li class="nav-item">
             <a class="nav-link btn btn-sm btn-outline-secondary" href="/logout">
-               <i class="fas fa-user"></i> &nbsp; TEST Logout
-               {{-- <i class="fas fa-user"></i> &nbsp; {{ auth('admin')->user()->username }} Logout --}}
+               <i class="fas fa-user"></i> &nbsp; {{ auth('admin')->user()->username }} Logout
             </a>
         </li>
     </ul>

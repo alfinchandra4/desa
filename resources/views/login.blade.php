@@ -20,6 +20,11 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <!-- /.login-logo -->
+        @if (session('error'))
+        <div class="alert alert-danger" role="alert">
+            {{ session('error') }}
+        </div>
+        @endif
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
                 <a href="#" class="h1">Desa <b>Poncokusumo</b></a>

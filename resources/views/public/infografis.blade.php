@@ -6,12 +6,10 @@
 <div class="infografis container">
     <div class="jumbotron">
         <div class="text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae commodi illo quo veritatis quam
-            delectus unde aliquam, laborum praesentium necessitatibus dolorem? Provident voluptatem perferendis aliquam,
-            vitae non aperiam quaerat molestiae?
+            <h1 class="fw-bold">INFOGRAFIS</h1>
         </div>
         <div class="image">
-            <img src="{{ asset('photos/infografis/infografis.png') }}" width="300px" height="300px" />
+            <img src="{{ asset('photos/infografis/infografis.png') }}" width="400px" height="400px" />
         </div>
     </div>
     <div class="demografi">

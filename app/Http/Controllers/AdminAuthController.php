@@ -15,8 +15,9 @@ class AdminAuthController extends Controller
     public function attempting(Request $request)
     {
         if (Auth::guard('admin')->attempt(['username' => $request->username, 'password' => $request->password])) {
-            dd('ok');
+            return redirect()->route('admin.index');
         }
+        return back()->withError('Error! Invalid credentials');
     }
 
     public function logout()
